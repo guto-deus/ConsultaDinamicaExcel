@@ -38,6 +38,8 @@ namespace ConsultaDinamicaExcel
             this.btn_importar_excel = new System.Windows.Forms.Button();
             this.label_numero_registros = new System.Windows.Forms.Label();
             this.txt_quant_registros = new System.Windows.Forms.TextBox();
+            this.ofd1 = new System.Windows.Forms.OpenFileDialog();
+            this.btn_arquivo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +67,7 @@ namespace ConsultaDinamicaExcel
             this.btn_Procurar.TabIndex = 2;
             this.btn_Procurar.Text = "Procurar";
             this.btn_Procurar.UseVisualStyleBackColor = false;
+            this.btn_Procurar.Click += new System.EventHandler(this.btn_Procurar_Click_1);
             // 
             // btn_Exibir_Todos
             // 
@@ -75,6 +78,7 @@ namespace ConsultaDinamicaExcel
             this.btn_Exibir_Todos.TabIndex = 3;
             this.btn_Exibir_Todos.Text = "Exibir Todos";
             this.btn_Exibir_Todos.UseVisualStyleBackColor = false;
+            this.btn_Exibir_Todos.Click += new System.EventHandler(this.btn_Exibir_Todos_Click);
             // 
             // dgv_dados
             // 
@@ -103,18 +107,20 @@ namespace ConsultaDinamicaExcel
             // btn_importar_excel
             // 
             this.btn_importar_excel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btn_importar_excel.Location = new System.Drawing.Point(490, 385);
+            this.btn_importar_excel.Location = new System.Drawing.Point(490, 381);
             this.btn_importar_excel.Name = "btn_importar_excel";
             this.btn_importar_excel.Size = new System.Drawing.Size(120, 29);
             this.btn_importar_excel.TabIndex = 6;
             this.btn_importar_excel.Text = "Importar Excel";
             this.btn_importar_excel.UseVisualStyleBackColor = false;
+            this.btn_importar_excel.Click += new System.EventHandler(this.btn_importar_excel_Click);
             // 
             // label_numero_registros
             // 
             this.label_numero_registros.AutoSize = true;
             this.label_numero_registros.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label_numero_registros.Location = new System.Drawing.Point(639, 388);
+            this.label_numero_registros.Location = new System.Drawing.Point(629, 385);
+            this.label_numero_registros.Margin = new System.Windows.Forms.Padding(3);
             this.label_numero_registros.Name = "label_numero_registros";
             this.label_numero_registros.Size = new System.Drawing.Size(111, 20);
             this.label_numero_registros.TabIndex = 7;
@@ -122,10 +128,24 @@ namespace ConsultaDinamicaExcel
             // 
             // txt_quant_registros
             // 
-            this.txt_quant_registros.Location = new System.Drawing.Point(756, 386);
+            this.txt_quant_registros.Location = new System.Drawing.Point(760, 381);
             this.txt_quant_registros.Name = "txt_quant_registros";
             this.txt_quant_registros.Size = new System.Drawing.Size(32, 27);
             this.txt_quant_registros.TabIndex = 8;
+            // 
+            // ofd1
+            // 
+            this.ofd1.FileName = "openFileDialog1";
+            // 
+            // btn_arquivo
+            // 
+            this.btn_arquivo.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btn_arquivo.Location = new System.Drawing.Point(12, 381);
+            this.btn_arquivo.Name = "btn_arquivo";
+            this.btn_arquivo.Size = new System.Drawing.Size(472, 29);
+            this.btn_arquivo.TabIndex = 9;
+            this.btn_arquivo.UseVisualStyleBackColor = false;
+            this.btn_arquivo.Click += new System.EventHandler(this.btn_arquivo_Click);
             // 
             // Form1
             // 
@@ -133,6 +153,7 @@ namespace ConsultaDinamicaExcel
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(804, 424);
+            this.Controls.Add(this.btn_arquivo);
             this.Controls.Add(this.txt_quant_registros);
             this.Controls.Add(this.label_numero_registros);
             this.Controls.Add(this.btn_importar_excel);
@@ -161,6 +182,7 @@ namespace ConsultaDinamicaExcel
         private System.Windows.Forms.Button btn_importar_excel;
         private System.Windows.Forms.Label label_numero_registros;
         private System.Windows.Forms.TextBox txt_quant_registros;
+        private System.Windows.Forms.OpenFileDialog ofd1;
+        private System.Windows.Forms.Button btn_arquivo;
     }
 }
-
