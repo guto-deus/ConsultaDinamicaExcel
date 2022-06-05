@@ -23,7 +23,7 @@ namespace ConsultaDinamicaExcel
                 cbo_Busca.Items.Clear();
 
                 //converter dados para um datatable
-                DataTable dt = GetTabalaExcel(arquivoExel);
+                DataTable dt = GetTabelaExcel(arquivoExel);
                 dgv_dados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                 dgv_dados.DataSource = dt;
 
@@ -46,7 +46,7 @@ namespace ConsultaDinamicaExcel
             }
         }
 
-        private DataTable GetTabalaExcel(string arquivoExcel)
+        private DataTable GetTabelaExcel(string arquivoExcel)
         {
             DataTable dt = new();
             try
